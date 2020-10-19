@@ -33,10 +33,15 @@ async function getProduct(req, res, id) {
 // @route POST /api/products/
 async function createProduct(req, res) {
     try {
-        const product = await Product.findAll()
-        
-        res.writeHead(200,{'Content-Type':'application/json'})
-        res.end(JSON.stringify(product))
+        const product = {
+            title: 'test product',
+            description: 'this is my product',
+            price: 100
+        }
+        const newProduct = Product.create(product)
+
+        res.writeHead(201,{'Content-Type':'application/json'})
+        return res.end(JSON.stringify(newProduct))
     } catch (error) {
         console.log(error)
     }
