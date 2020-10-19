@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/rafaelpianaro/rest-api-no-framework/issues"
   },
-  "homepage": "https://github.com/rafaelpianaro/rest-api-no-framework#readme"
+  "homepage": "https://github.com/rafaelpianaro/rest-api-no-framework#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.5"
+  }
 }
